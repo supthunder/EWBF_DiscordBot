@@ -34,7 +34,7 @@ def start_bot():
 		if gpu['temperature'] >= 90:
 			tempCheck(gpu['temperature'])
 
-	msgTxt = "```\n{}Sol/s {}W\n--------------\nServer: {}\nUptime: {}\nGPU's:\n{}\n```".format(str(totalSpeed),str(totalWatt),data['current_server'],str(uptime),gpuTxt)
+	msgTxt = "```css\n{}Sol/s {}W\n--------------\nServer: {}\nUptime: {}\nGPU's:\n{}\n```".format(str(totalWatt),str(totalSpeed),data['current_server'],str(uptime),gpuTxt)
 
 	msg = Webhook(url,msg=msgTxt)
 	msg.post()
