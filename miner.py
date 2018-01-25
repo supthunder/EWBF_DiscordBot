@@ -29,7 +29,7 @@ for gpu in data['result']:
 	totalSpeed += gpu['gpu_power_usage']
 	totalWatt += gpu['speed_sps']
 
-msgTxt = "```\n{}Sol/s {}W\n--------------\nServer: {}\nUptime: {}\nGPU's:\n{}\n```".format(str(totalSpeed),str(totalWatt),data['current_server'],str(uptime),gpuTxt)
+msgTxt = "```css\n{}Sol/s {}W\n--------------\nServer: {}\nUptime: {}\nGPU's:\n{}\n```".format(str(totalWatt),str(totalSpeed),data['current_server'],str(uptime),gpuTxt)
 
 msg = Webhook(url,msg=msgTxt)
 msg.post()
